@@ -1,0 +1,177 @@
+/*
+ * Primex component layer
+ * ----------------------
+ * Buttons, cards, breadcrumbs, pagination, widgets. These mirror the
+ * token-driven defaults so Elementor widgets inherit them when not overridden.
+ *
+ * Phase 2+ will add header/footer/section component styles. Phase 6 adds
+ * WooCommerce overrides.
+ */
+
+/* Buttons. */
+.primex-button,
+.wp-element-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--primex-space-1);
+	padding: 12px 24px;
+	font-family: var(--primex-font-body);
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 1.2;
+	color: var(--primex-color-white);
+	background: var(--primex-color-primary);
+	border: 0;
+	border-radius: var(--primex-radius);
+	cursor: pointer;
+	text-decoration: none;
+	transition: background var(--primex-transition), transform var(--primex-transition);
+}
+
+.primex-button:hover,
+.wp-element-button:hover {
+	background: var(--primex-color-dark);
+	color: var(--primex-color-white);
+	transform: translateY(-1px);
+}
+
+.primex-button--secondary {
+	background: var(--primex-color-secondary);
+	color: var(--primex-color-dark);
+}
+
+.primex-button--secondary:hover {
+	background: var(--primex-color-dark);
+	color: var(--primex-color-white);
+}
+
+.primex-button--outline {
+	background: transparent;
+	border: 1px solid var(--primex-color-primary);
+	color: var(--primex-color-primary);
+}
+
+.primex-button--outline:hover {
+	background: var(--primex-color-primary);
+	color: var(--primex-color-white);
+}
+
+/* Card. Reused across services, fleet, posts, etc. */
+.primex-card {
+	background: var(--primex-color-white);
+	border: 1px solid rgba(26, 26, 26, 0.06);
+	border-radius: var(--primex-radius-lg);
+	box-shadow: var(--primex-shadow-sm);
+	overflow: hidden;
+	transition: box-shadow var(--primex-transition), transform var(--primex-transition);
+}
+
+.primex-card:hover {
+	box-shadow: var(--primex-shadow-lg);
+	transform: translateY(-2px);
+}
+
+.primex-card__media {
+	aspect-ratio: 3 / 2;
+	overflow: hidden;
+	background: var(--primex-color-gray);
+}
+
+.primex-card__media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.primex-card__body {
+	padding: var(--primex-space-2);
+}
+
+.primex-card__title {
+	margin-bottom: var(--primex-space-1);
+}
+
+.primex-card__readmore {
+	margin-top: var(--primex-space-2);
+	font-weight: 600;
+}
+
+/* Breadcrumbs (semantic schema lives in Phase 9). */
+.primex-breadcrumbs {
+	font-size: 0.875rem;
+	margin-bottom: var(--primex-space-2);
+	color: var(--primex-color-text);
+}
+
+.primex-breadcrumbs ol {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 var(--primex-space-1);
+	margin: 0;
+	padding: 0;
+}
+
+.primex-breadcrumbs li + li::before {
+	content: "/";
+	margin-right: var(--primex-space-1);
+	color: var(--primex-color-text);
+	opacity: 0.5;
+}
+
+/* Pagination. */
+.primex-pagination {
+	display: flex;
+	gap: var(--primex-space-1);
+	justify-content: center;
+	margin-top: var(--primex-space-4);
+}
+
+.primex-pagination .page-numbers {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 40px;
+	height: 40px;
+	padding: 0 var(--primex-space-1);
+	border: 1px solid rgba(26, 26, 26, 0.1);
+	border-radius: var(--primex-radius);
+	color: var(--primex-color-text);
+	text-decoration: none;
+	transition: background var(--primex-transition), color var(--primex-transition);
+}
+
+.primex-pagination .page-numbers.current,
+.primex-pagination .page-numbers:hover {
+	background: var(--primex-color-primary);
+	color: var(--primex-color-white);
+	border-color: var(--primex-color-primary);
+}
+
+/* Widget base (footer + sidebar). */
+.primex-widget {
+	margin-bottom: var(--primex-space-3);
+}
+
+.primex-widget__title {
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	margin-bottom: var(--primex-space-2);
+}
+
+.primex-widget ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.primex-widget ul li {
+	padding: var(--primex-space-1) 0;
+	border-bottom: 1px solid rgba(26, 26, 26, 0.06);
+}
+
+.primex-widget ul li:last-child {
+	border-bottom: 0;
+}

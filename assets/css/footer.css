@@ -1,0 +1,222 @@
+/*
+ * Primex footer layer
+ * -------------------
+ * Dark footer with four columns + bottom bar.
+ */
+
+.primex-footer {
+	background: var(--primex-color-dark);
+	color: var(--primex-color-gray);
+	padding-top: var(--primex-space-6);
+	margin-top: var(--primex-space-6);
+}
+
+.primex-footer a {
+	color: var(--primex-color-gray);
+	text-decoration: none;
+	transition: color var(--primex-transition);
+}
+
+.primex-footer a:hover {
+	color: var(--primex-color-secondary);
+}
+
+.primex-footer__grid {
+	display: grid;
+	grid-template-columns: 1.5fr repeat(3, 1fr);
+	gap: var(--primex-space-4);
+	padding-bottom: var(--primex-space-5);
+}
+
+.primex-footer__col--about {
+	max-width: 360px;
+}
+
+.primex-footer__logo {
+	margin-bottom: var(--primex-space-2);
+}
+
+.primex-footer__logo img,
+.primex-footer .custom-logo {
+	max-height: 48px;
+	width: auto;
+	filter: brightness(0) invert(1); /* White-ify the logo on dark bg if it's dark-on-light. */
+}
+
+.primex-footer__brand-link {
+	font-family: var(--primex-font-heading);
+	font-size: 1.5rem;
+	font-weight: 800;
+	color: var(--primex-color-white);
+	display: inline-block;
+}
+
+.primex-footer__about {
+	color: var(--primex-color-gray);
+	margin-bottom: var(--primex-space-2);
+	line-height: 1.7;
+}
+
+/* Footer widget title (used when widgets render). */
+.primex-footer .primex-widget__title,
+.primex-footer .primex-widget h2,
+.primex-footer .widget-title {
+	font-family: var(--primex-font-heading);
+	color: var(--primex-color-white);
+	font-size: 1.0625rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	margin-bottom: var(--primex-space-2);
+}
+
+.primex-footer__links,
+.primex-footer .primex-widget ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.primex-footer__links li,
+.primex-footer .primex-widget ul li {
+	padding: 6px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.primex-footer__links li:last-child,
+.primex-footer .primex-widget ul li:last-child {
+	border-bottom: 0;
+}
+
+.primex-footer__contact {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.primex-footer__contact li {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--primex-space-1);
+	padding: 6px 0;
+}
+
+.primex-footer__contact svg {
+	color: var(--primex-color-secondary);
+	flex-shrink: 0;
+	margin-top: 3px;
+}
+
+.primex-footer__newsletter-text {
+	margin-bottom: var(--primex-space-2);
+}
+
+.primex-footer__newsletter {
+	display: flex;
+	flex-direction: column;
+	gap: var(--primex-space-1);
+}
+
+.primex-footer__newsletter input {
+	padding: 10px 14px;
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	border-radius: var(--primex-radius);
+	background: rgba(255, 255, 255, 0.04);
+	color: var(--primex-color-white);
+	font-family: var(--primex-font-body);
+	font-size: 0.9375rem;
+}
+
+.primex-footer__newsletter input::placeholder {
+	color: rgba(245, 247, 250, 0.5);
+}
+
+.primex-footer__newsletter input:focus {
+	outline: 2px solid var(--primex-color-primary);
+	border-color: var(--primex-color-primary);
+}
+
+.primex-footer__social {
+	list-style: none;
+	display: flex;
+	gap: var(--primex-space-1);
+	margin: 0;
+	padding: 0;
+}
+
+.primex-footer__social-link {
+	display: inline-flex;
+	width: 36px;
+	height: 36px;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid rgba(255, 255, 255, 0.14);
+	border-radius: 50%;
+	color: var(--primex-color-gray);
+}
+
+.primex-footer__social-link:hover {
+	background: var(--primex-color-primary);
+	border-color: var(--primex-color-primary);
+	color: var(--primex-color-white);
+}
+
+/* ---------- Bottom bar ---------- */
+.primex-footer__bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--primex-space-2);
+	padding: var(--primex-space-2) 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.primex-footer__copyright {
+	margin: 0;
+	font-size: 0.875rem;
+	color: var(--primex-color-gray);
+}
+
+.primex-footer__legal-list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 var(--primex-space-2);
+	margin: 0;
+	padding: 0;
+	font-size: 0.875rem;
+}
+
+.primex-footer__legal-list li::after {
+	content: "|";
+	margin-left: var(--primex-space-2);
+	opacity: 0.4;
+}
+
+.primex-footer__legal-list li:last-child::after {
+	content: "";
+	margin-left: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+	.primex-footer__grid {
+		grid-template-columns: 1fr 1fr;
+		gap: var(--primex-space-3);
+	}
+	.primex-footer__col--about {
+		grid-column: 1 / -1;
+		max-width: none;
+	}
+}
+
+@media (max-width: 600px) {
+	.primex-footer__grid {
+		grid-template-columns: 1fr;
+	}
+	.primex-footer__bottom {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
