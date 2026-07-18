@@ -1,0 +1,47 @@
+/*
+Theme Name: Primex2
+Theme URI: https://primex.example.com/
+Author: Primex Team
+Author URI: https://primex.example.com/
+Description: Primex is a premium, Elementor-first WordPress theme for logistics, transportation, freight, shipping, warehousing, and supply-chain businesses. Built on a clean design-token foundation (theme.json + CSS custom properties), with full WooCommerce support, RTL readiness, WCAG 2. AA-minded accessibility, and performance tuned for Core Web Vitals. Layouts are never hardcoded — everything is editable in Elementor.
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.5
+Requires PHP: 8.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: primex
+Tags: logistics, transportation, e-commerce, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-logo, custom-colors, custom-menu, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, rtl-language-support, block-styles, wide-blocks, front-end-post-form
+*/
+
+/*
+ * The front-end cascade lives in assets/css/. This file only carries the
+ * WordPress theme header above plus a minimal safety reset so the theme is
+ * usable even before the bundled stylesheets are enqueued.
+ */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	line-height: 1.6;
+}
+
+img,
+picture,
+video,
+svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}

@@ -1,0 +1,38 @@
+/*
+ * Primex editor styles
+ * --------------------
+ * Mirrors front-end typography in the block editor so content authors see what
+ * they'll ship. Re-imports the token layer from base.css via enqueue as well;
+ * this file adds editor-only overrides.
+ */
+
+:root {
+	--primex-color-primary:   #0B5FFF;
+	--primex-color-secondary: #FFB400;
+	--primex-color-dark:      #1A1A1A;
+	--primex-color-text:      #1A1A1A;
+	--primex-font-body:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	--primex-font-heading: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.editor-styles-wrapper,
+.block-editor-writing-flow {
+	font-family: var(--primex-font-body);
+	font-size: 1rem;
+	line-height: 1.6;
+	color: var(--primex-color-text);
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+	font-family: var(--primex-font-heading);
+	color: var(--primex-color-dark);
+}
+
+.editor-styles-wrapper a {
+	color: var(--primex-color-primary);
+}
